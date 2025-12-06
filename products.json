@@ -1,29 +1,57 @@
 [
   {
     "id": "mug-1",
-    "name": "Matte Coffee Mug – 350 ml",
-    "price": 599,
-    "salePrice": 499,
-    "active": true,
-    "stock": "in-stock",
-    "description": "Minimal matte ceramic mug perfect for daily chai & coffee."
-  },
-  {
-    "id": "plate-1",
-    "name": "Speckled Dinner Plate – 10 inch",
+    "name": "Matte Coffee Mug – Charcoal",
     "price": 899,
-    "salePrice": 749,
+    "salePrice": 499,
+    "category": "mugs",
     "active": true,
     "stock": "in-stock",
-    "description": "Hand-glazed speckled plate for modern tables."
+    "images": ["mug1.jpg", "mug2.jpg", "mug3.jpg"],
+    "description": "Premium matte finish ceramic mug for daily chai & coffee."
   },
   {
-    "id": "planter-1",
-    "name": "Minimal Desk Planter",
-    "price": 699,
+    "id": "mug-2",
+    "name": "Glossy Ribbed Mug – White",
+    "price": 999,
     "salePrice": 599,
+    "category": "mugs",
     "active": true,
     "stock": "in-stock",
-    "description": "Perfect for succulents & small indoor plants."
+    "images": ["mug4.jpg", "mug5.jpg"],
+    "description": "Modern ribbed design glossy ceramic mug."
+  },
+  {
+    "id": "vase-1",
+    "name": "Minimal Ceramic Vase – Ivory",
+    "price": 1499,
+    "salePrice": 899,
+    "category": "vases",
+    "active": true,
+    "stock": "in-stock",
+    "images": ["mug3.jpg"],
+    "description": "Tall premium ceramic vase for modern home decor."
+  },
+  {
+    "id": "decor-1",
+    "name": "Abstract Table Decor – Sand",
+    "price": 1299,
+    "salePrice": 799,
+    "category": "decor",
+    "active": true,
+    "stock": "in-stock",
+    "images": ["mug2.jpg"],
+    "description": "Minimal abstract decor piece for shelves & tables."
+  },
+  {
+    "id": "kitchen-1",
+    "name": "Ceramic Kitchen Container – Set of 2",
+    "price": 1799,
+    "salePrice": 999,
+    "category": "kitchen",
+    "active": true,
+    "stock": "in-stock",
+    "images": ["mug1.jpg", "mug4.jpg"],
+    "description": "Airtight premium ceramic kitchen storage container set."
   }
 ]
