@@ -1,633 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Decorakart – Handcrafted Ceramic Decor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Decorakart offers handcrafted ceramic mugs, plates, planters and decor pieces for cozy, aesthetic homes." />
+  <meta charset="UTF-8">
+  <title>Decorakart – Premium Ceramic Home Decor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Decorakart – premium ceramic mugs, plates, planters & home decor. Order directly on WhatsApp.">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.5;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
       color: #222;
-      background: #faf7f2;
     }
     a { text-decoration: none; color: inherit; }
 
     header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 14px 24px;
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(250,247,242,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee0d0;
     }
     .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1rem;
+      max-width: 1200px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .logo {
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-    }
-    .logo span {
-      font-weight: 900;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.25rem;
-      font-size: 0.9rem;
-    }
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.6rem 1.4rem;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 18px;
+      letter-spacing: 4px;
       font-weight: 600;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-      white-space: nowrap;
     }
-    .btn-primary {
-      background: #d28c5a;
-      color: white;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-    }
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.16);
-    }
-    .btn-outline {
-      border: 1px solid #d28c5a;
-      color: #d28c5a;
-      background: transparent;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem 3rem;
+    .menu {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
     }
 
     .hero {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 24px;
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
       align-items: center;
-      padding-top: 1.5rem;
-      padding-bottom: 2rem;
-    }
-    .hero-tag {
-      font-size: 0.8rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #9c6a3d;
-      margin-bottom: 0.75rem;
     }
     .hero h1 {
-      font-size: clamp(2.1rem, 3.1vw, 2.8rem);
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
+      font-size: 46px;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
-    .hero h1 span {
-      color: #b56734;
-    }
-    .hero-sub {
-      font-size: 0.98rem;
+    .hero p {
+      font-size: 16px;
       color: #555;
-      margin-bottom: 1.5rem;
-      max-width: 32rem;
+      margin-bottom: 26px;
+      max-width: 460px;
     }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      font-size: 0.78rem;
-      color: #744d2a;
+    .btn-main {
+      background: #000;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      display: inline-block;
     }
-    .badge {
-      border-radius: 999px;
-      padding: 0.25rem 0.7rem;
-      background: #f3e1ce;
-    }
-
-    .hero-card {
-      background: #f3e6da;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      position: relative;
-      overflow: hidden;
-      min-height: 260px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .hero-card-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #8a5a33;
-      margin-bottom: 0.4rem;
-    }
-    .hero-card-main {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-    .hero-card-sub {
-      font-size: 0.85rem;
-      color: #5b452f;
-      margin-bottom: 1.5rem;
-    }
-    .hero-card-pill {
-      position: absolute;
-      right: 1.1rem;
-      top: 1.1rem;
-      border-radius: 999px;
-      padding: 0.15rem 0.75rem;
-      background: #fefaf5;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #9c6a3d;
-    }
-    .hero-card-circle {
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #ffe8ce, #f3e1d2);
-      bottom: -40px;
-      right: -40px;
-      opacity: 0.85;
-    }
-    .hero-card-mug {
-      position: absolute;
-      bottom: 18px;
-      right: 28px;
-      width: 120px;
-      height: 120px;
-      border-radius: 1.8rem;
-      background: linear-gradient(145deg, #fdfdfd, #f4efe9);
-      box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+    .hero-img {
+      background: #eee;
+      border-radius: 20px;
+      height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 0.75rem;
-      color: #7a5a3a;
+      font-size: 14px;
+      color: #777;
     }
 
     section {
-      margin-top: 3rem;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 24px;
     }
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 1.2rem;
-    }
-    .section-heading h2 {
-      font-size: 1.25rem;
-    }
-    .section-heading p {
-      font-size: 0.85rem;
-      color: #666;
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 26px;
     }
 
-    .categories {
+    .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 28px;
     }
-    .category-card {
-      background: #fdf8f1;
-      border-radius: 1rem;
-      padding: 0.9rem 1rem;
-      border: 1px solid #f0dfcf;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      font-size: 0.85rem;
+    .product {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
     }
-    .category-name {
-      font-weight: 600;
-      margin-bottom: 0.1rem;
-    }
-    .category-note {
-      font-size: 0.78rem;
-      color: #777;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.3rem;
-    }
-    .product-card {
-      background: #fdf8f1;
-      border-radius: 1.2rem;
-      padding: 0.9rem;
-      border: 1px solid #f0dfcf;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-    }
-    .product-image {
-      border-radius: 0.9rem;
-      background: linear-gradient(135deg, #f7efe5, #f3e3d2);
-      height: 150px;
+    .product-img {
+      height: 180px;
+      background: #f1f1f1;
+      border-radius: 10px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      color: #8a6a4a;
-      margin-bottom: 0.4rem;
-    }
-    .product-title {
-      font-weight: 600;
-    }
-    .product-meta {
-      font-size: 0.8rem;
+      font-size: 13px;
       color: #777;
     }
-    .product-price {
-      font-weight: 700;
-      margin-top: 0.2rem;
+    .product h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
     }
-    .product-actions {
-      margin-top: 0.4rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-    .product-chip {
-      font-size: 0.72rem;
-      border-radius: 999px;
-      padding: 0.15rem 0.6rem;
-      background: #f3e1ce;
-      color: #7b5733;
-      display: inline-block;
-      margin-top: 0.2rem;
+    .price {
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
     .about {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
-      gap: 2rem;
-    }
-    .about p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 0.75rem;
-    }
-    .about-card {
-      background: #fdf8f1;
-      border-radius: 1.2rem;
-      padding: 1rem;
-      border: 1px solid #f0dfcf;
-      font-size: 0.85rem;
-      color: #5c452f;
-    }
-    .about-list {
-      margin-top: 0.5rem;
-      padding-left: 1rem;
-      font-size: 0.85rem;
-    }
-    .about-list li {
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 1.5rem;
-      font-size: 0.88rem;
-    }
-    .contact-box {
-      background: #fdf8f1;
-      border-radius: 1.2rem;
-      padding: 1rem;
-      border: 1px solid #f0dfcf;
-    }
-    .contact-box h3 {
-      font-size: 0.98rem;
-      margin-bottom: 0.4rem;
-    }
-    .contact-line {
-      margin-bottom: 0.3rem;
-    }
-    .contact-label {
-      font-weight: 600;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #8a5a33;
-      margin-bottom: 0.4rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
 
     footer {
-      border-top: 1px solid #eee0d0;
-      padding: 1.5rem 1rem 2rem;
-      font-size: 0.8rem;
-      color: #888;
-      max-width: 1100px;
-      margin: 0 auto;
+      background: #111;
+      color: #ccc;
+      padding: 40px 24px;
     }
-    footer div {
+    footer .foot {
+      max-width: 1200px;
+      margin: auto;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      gap: 0.75rem;
-      align-items: center;
-    }
-    .footer-links {
-      display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .hero {
+      .hero, .about {
         grid-template-columns: 1fr;
       }
-      .about {
-        grid-template-columns: 1fr;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero-card {
-        order: -1;
+      .hero h1 {
+        font-size: 34px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo">
-        <span>DECORA</span>KART
-      </div>
-      <nav class="nav-links">
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#shop" class="btn btn-outline">View Products</a>
-      </nav>
-      <a href="#shop" class="btn btn-outline">Shop</a>
+
+<header>
+  <div class="nav">
+    <div class="logo">DECORAKART</div>
+    <div class="menu">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-tag">Decorakart · Ceramic Studio</div>
-        <h1>
-          Handcrafted <span>Ceramic Pieces</span><br />
-          for warm, cozy homes.
-        </h1>
-        <p class="hero-sub">
-          From everyday chai mugs to elegant plates and planters, Decorakart brings
-          carefully curated ceramic pieces that make your corners feel calm, cozy and
-          beautifully yours.
-        </p>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-          <!-- TODO: Replace 8807403946 with your WhatsApp number, e.g. 9198xxxxxxx -->
-          <a class="btn btn-primary" href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%20ceramic%20products.">
-            Order on WhatsApp
-          </a>
-          <a class="btn btn-outline" href="#shop">
-            Browse Collection
-          </a>
-        </div>
-        <div class="hero-badges">
-          <span class="badge">Food Safe</span>
-          <span class="badge">Microwave Friendly*</span>
-          <span class="badge">Small Batch Pieces</span>
-        </div>
-      </div>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Premium ceramic decor<br>for modern homes</h1>
+    <p>
+      Handpicked ceramic mugs, plates, bowls and planters designed
+      to elevate your everyday living experience.
+    </p>
+    <a class="btn-main" href="https://wa.me/918807403946?text=Hi%20Decorakart,%20I%20want%20to%20order%20ceramic%20products.">
+      Order on WhatsApp
+    </a>
+  </div>
+  <div class="hero-img">
+    Hero banner image (upload later)
+  </div>
+</div>
 
-      <aside class="hero-card">
-        <div class="hero-card-pill">New · Ceramic Edit</div>
-        <div>
-          <div class="hero-card-title">This Month’s Favourite</div>
-          <div class="hero-card-main">Matte Stoneware Mug Set</div>
-          <div class="hero-card-sub">
-            Perfectly weighted mugs for your slow morning chai, coffee or hot chocolate.
-            Limited pieces only.
-          </div>
-          <div style="font-size:0.85rem; color:#7b5733;">
-            • Starting at ₹499<br />
-            • Gift-ready packaging available
-          </div>
-        </div>
-        <div class="hero-card-circle"></div>
-        <div class="hero-card-mug">
-          Imagine a soft-touch matte mug in your favourite colour.  
-          <strong>That’s Decorakart.</strong>
-        </div>
-      </aside>
-    </section>
+<!-- PRODUCTS -->
+<section id="shop">
+  <div class="section-title">Best Sellers</div>
+  <div class="products">
 
-    <!-- CATEGORIES -->
-    <section id="shop">
-      <div class="section-heading">
-        <h2>Shop by category</h2>
-        <p>Curated ceramic pieces for every corner of your home.</p>
-      </div>
-      <div class="categories">
-        <div class="category-card">
-          <div class="category-name">Mugs & Cups</div>
-          <div class="category-note">For chai, coffee and everything in between.</div>
-        </div>
-        <div class="category-card">
-          <div class="category-name">Plates & Bowls</div>
-          <div class="category-note">Serveware that feels as special as your food.</div>
-        </div>
-        <div class="category-card">
-          <div class="category-name">Planters</div>
-          <div class="category-note">Minimal planters for your leafy friends.</div>
-        </div>
-        <div class="category-card">
-          <div class="category-name">Home Decor</div>
-          <div class="category-note">Vases, trinket dishes, table accents & more.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED PRODUCTS -->
-    <section>
-      <div class="section-heading">
-        <h2>Featured pieces</h2>
-        <p>Start with a few hero products. You can add more anytime.</p>
-      </div>
-
-      <div class="products-grid">
-        <!-- PRODUCT 1 -->
-        <article class="product-card">
-          <div class="product-image">
-            Product Photo (Mug Set)
-          </div>
-          <div class="product-title">Matte Finish Coffee Mug – 350 ml</div>
-          <div class="product-meta">Microwave & dishwasher safe · Stoneware</div>
-          <div class="product-price">₹499</div>
-          <div class="product-chip">Best for daily chai & coffee</div>
-          <div class="product-actions">
-            <a class="btn btn-primary"
-               href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Matte%20Finish%20Coffee%20Mug%20%E2%80%93%20350ml">
-              Order on WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <!-- PRODUCT 2 -->
-        <article class="product-card">
-          <div class="product-image">
-            Product Photo (Dinner Plate)
-          </div>
-          <div class="product-title">Speckled Dinner Plate – 10 inch</div>
-          <div class="product-meta">Hand-glazed · Subtle speckle pattern</div>
-          <div class="product-price">₹749</div>
-          <div class="product-chip">Perfect for special dinners</div>
-          <div class="product-actions">
-            <a class="btn btn-primary"
-               href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Speckled%20Dinner%20Plate%20%E2%80%93%2010%20inch">
-              Order on WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <!-- PRODUCT 3 -->
-        <article class="product-card">
-          <div class="product-image">
-            Product Photo (Planter)
-          </div>
-          <div class="product-title">Minimal Desk Planter</div>
-          <div class="product-meta">Ideal for succulents & small plants</div>
-          <div class="product-price">₹599</div>
-          <div class="product-chip">Great for work desks & shelves</div>
-          <div class="product-actions">
-            <a class="btn btn-primary"
-               href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Minimal%20Desk%20Planter">
-              Order on WhatsApp
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="section-heading">
-        <h2>About Decorakart</h2>
-        <p>A small-batch ceramic brand built around slow, cozy living.</p>
-      </div>
-
-      <div class="about">
-        <div>
-          <p>
-            Decorakart was born from a simple love for beautiful, functional ceramics.
-            We believe that the cups, plates and decor you use every day should feel
-            as calming as your favourite corner at home.
-          </p>
-          <p>
-            Every piece is carefully selected and checked for quality, finish and usability.
-            No rush, no mass-produced chaos — just thoughtfully designed ceramics that
-            make your home feel warm and personal.
-          </p>
-          <p>
-            Whether you’re building your first home setup, gifting a friend or upgrading
-            your daily chai mug, we’re happy you’re here.
-          </p>
-        </div>
-
-        <aside class="about-card">
-          <div class="contact-label">What you can expect</div>
-          <ul class="about-list">
-            <li>Small curated batches instead of random stock.</li>
-            <li>Clear communication on availability & dispatch.</li>
-            <li>Carefully packed orders to reduce breakage.</li>
-            <li>Honest photos, simple pricing, no overpromises.</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="section-heading">
-        <h2>Contact & Orders</h2>
-        <p>Have a question, bulk order or custom gifting request? Reach out.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-box">
-          <div class="contact-label">Primary contact</div>
-          <div class="contact-line">
-            <strong>WhatsApp:</strong> <span>+91-XXXXXXXXXX</span>
-          </div>
-          <div class="contact-line">
-            <strong>Email:</strong> <span>hello@decorakart.com</span> <!-- optional -->
-          </div>
-          <div class="contact-line">
-            <strong>Location:</strong> <span>Nawada, Bihar, India</span> <!-- edit or remove -->
-          </div>
-          <p style="margin-top:0.7rem;">
-            Send us a WhatsApp message with the product name, quantity and your full
-            address. We’ll reply with total amount, UPI details and dispatch timeline.
-          </p>
-        </div>
-
-        <div class="contact-box">
-          <h3>How ordering works</h3>
-          <ol style="margin-left:1rem; font-size:0.86rem; margin-top:0.4rem;">
-            <li>Browse the products above and note the product name.</li>
-            <li>Click “Order on WhatsApp” or message us with the product name & quantity.</li>
-            <li>We confirm availability, total cost & shipping charges.</li>
-            <li>You pay via UPI / bank transfer.</li>
-            <li>We pack and dispatch your order with tracking details.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div>
-      <span>© <span id="year"></span> Decorakart. All rights reserved.</span>
-      <div class="footer-links">
-        <span>Shipping & Returns (on request)</span>
-        <span>Handwash recommended for longest life.</span>
-      </div>
+    <div class="product">
+      <div class="product-img">Mug image</div>
+      <h3>Matte Ceramic Mug – 350 ml</h3>
+      <div class="price">₹499</div>
+      <a class="btn-main" href="https://wa.me/918807403946?text=I%20want%20Matte%20Ceramic%20Mug">
+        Buy on WhatsApp
+      </a>
     </div>
-  </footer>
 
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <div class="product">
+      <div class="product-img">Plate image</div>
+      <h3>Speckled Dinner Plate – 10 inch</h3>
+      <div class="price">₹749</div>
+      <a class="btn-main" href="https://wa.me/918807403946?text=I%20want%20Speckled%20Dinner%20Plate">
+        Buy on WhatsApp
+      </a>
+    </div>
+
+    <div class="product">
+      <div class="product-img">Planter image</div>
+      <h3>Minimal Desk Planter</h3>
+      <div class="price">₹599</div>
+      <a class="btn-main" href="https://wa.me/918807403946?text=I%20want%20Minimal%20Desk%20Planter">
+        Buy on WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title">About Decorakart</div>
+  <div class="about">
+    <p>
+      Decorakart is your destination for minimal, premium ceramic home decor.
+      Every piece is selected for quality, finish and long-term durability.
+      We focus on small batches and timeless designs.
+    </p>
+    <p>
+      Whether you are building your dream home or gifting someone special,
+      our ceramics are crafted to feel warm, modern and elegant.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title">Contact</div>
+  <p>WhatsApp: +91-8807403946</p>
+  <p>Email: hello@decorakart.com</p>
+  <p>Location: India</p>
+</section>
+
+<footer>
+  <div class="foot">
+    <div>© <span id="year"></span> Decorakart</div>
+    <div>Premium ceramic decor for modern homes</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/918807403946">
+  WhatsApp
+</a>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
-
