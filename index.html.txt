@@ -414,8 +414,8 @@
           beautifully yours.
         </p>
         <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-          <!-- TODO: Replace YOURNUMBER with your WhatsApp number, e.g. 9198xxxxxxx -->
-          <a class="btn btn-primary" href="https://wa.me/YOURNUMBER?text=Hi%20Decorakart%2C%20I%20want%20to%20order%20ceramic%20products.">
+          <!-- TODO: Replace 8807403946 with your WhatsApp number, e.g. 9198xxxxxxx -->
+          <a class="btn btn-primary" href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%20ceramic%20products.">
             Order on WhatsApp
           </a>
           <a class="btn btn-outline" href="#shop">
@@ -496,7 +496,7 @@
           <div class="product-chip">Best for daily chai & coffee</div>
           <div class="product-actions">
             <a class="btn btn-primary"
-               href="https://wa.me/YOURNUMBER?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Matte%20Finish%20Coffee%20Mug%20%E2%80%93%20350ml">
+               href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Matte%20Finish%20Coffee%20Mug%20%E2%80%93%20350ml">
               Order on WhatsApp
             </a>
           </div>
@@ -513,7 +513,7 @@
           <div class="product-chip">Perfect for special dinners</div>
           <div class="product-actions">
             <a class="btn btn-primary"
-               href="https://wa.me/YOURNUMBER?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Speckled%20Dinner%20Plate%20%E2%80%93%2010%20inch">
+               href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Speckled%20Dinner%20Plate%20%E2%80%93%2010%20inch">
               Order on WhatsApp
             </a>
           </div>
@@ -530,7 +530,7 @@
           <div class="product-chip">Great for work desks & shelves</div>
           <div class="product-actions">
             <a class="btn btn-primary"
-               href="https://wa.me/YOURNUMBER?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Minimal%20Desk%20Planter">
+               href="https://wa.me/8807403946?text=Hi%20Decorakart%2C%20I%20want%20to%20order%3A%20Minimal%20Desk%20Planter">
               Order on WhatsApp
             </a>
           </div>
@@ -630,3 +630,4 @@
   </script>
 </body>
 </html>
+
