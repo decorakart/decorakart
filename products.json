@@ -7,7 +7,7 @@
     "category": "mugs",
     "active": true,
     "stock": "in-stock",
-    "images": ["mug1.jpg", "mug2.jpg", "mug3.jpg"],
+    "image": "mug1.jpg",
     "description": "Premium matte finish ceramic mug for daily chai & coffee."
   },
   {
@@ -18,7 +18,7 @@
     "category": "mugs",
     "active": true,
     "stock": "in-stock",
-    "images": ["mug4.jpg", "mug5.jpg"],
+    "image": "mug2.jpg",
     "description": "Modern ribbed design glossy ceramic mug."
   },
   {
@@ -29,7 +29,7 @@
     "category": "vases",
     "active": true,
     "stock": "in-stock",
-    "images": ["mug3.jpg"],
+    "image": "mug3.jpg",
     "description": "Tall premium ceramic vase for modern home decor."
   },
   {
@@ -40,7 +40,7 @@
     "category": "decor",
     "active": true,
     "stock": "in-stock",
-    "images": ["mug2.jpg"],
+    "image": "mug4.jpg",
     "description": "Minimal abstract decor piece for shelves & tables."
   },
   {
@@ -51,7 +51,7 @@
     "category": "kitchen",
     "active": true,
     "stock": "in-stock",
-    "images": ["mug1.jpg", "mug4.jpg"],
+    "image": "mug5.jpg",
     "description": "Airtight premium ceramic kitchen storage container set."
   }
 ]
