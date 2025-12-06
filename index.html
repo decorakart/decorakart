@@ -1,616 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Decorakart – Ceramic Home Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Decorakart – premium ceramic mugs, plates, bowls and planters. Add to cart and checkout on WhatsApp." />
+  <title>Decorakart Store</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #faf7f3;
-      color: #222;
-    }
-    a { text-decoration: none; color: inherit; }
-
-    /* TOP SALE BAR */
-    .top-bar {
-      background: #c9a675;
-      color: #fff;
-      font-size: 12px;
-      text-align: center;
-      padding: 7px 10px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* HEADER */
-    header {
-      background: #fff;
-      border-bottom: 1px solid #eee0d0;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .logo {
-      font-size: 20px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    .logo span { color: #c06a3f; }
-    .menu {
-      display: flex;
-      gap: 20px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    .menu a { opacity: 0.75; }
-    .menu a:hover { opacity: 1; }
-
-    .btn-outline {
-      background: transparent;
-      color: #111;
-      border-radius: 999px;
-      padding: 9px 18px;
-      border: 1px solid #222;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .btn-main {
-      background: #111;
-      color: #fff;
-      padding: 12px 26px;
-      border-radius: 999px;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 30px auto 80px;
-      padding: 0 24px;
-    }
-
-    /* HERO (Nestasia style) */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: stretch;
-      margin-bottom: 60px;
-    }
-    .hero-banner {
-      border-radius: 22px;
-      overflow: hidden;
-      background: #e5e0da;
-      position: relative;
-      min-height: 320px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 14px;
-    }
-    /* Agar tum banner.jpg upload kar do to yeh line use karna:
-    .hero-banner {
-      background-image: url('banner.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-    }
-    */
-
-    .hero-content {
-      padding: 24px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-    }
-    .hero-tag {
-      font-size: 13px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #b16638;
-    }
-    .hero-title {
-      font-size: 36px;
-      line-height: 1.15;
-    }
-    .hero-sub {
-      font-size: 15px;
-      color: #555;
-      max-width: 360px;
-    }
-    .hero-sale {
-      margin-top: 10px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: #a34d3b;
-    }
-
-    .hero-badge {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      background: #b0484b;
-      color: #fff;
-      padding: 18px 20px;
-      border-radius: 16px;
-      text-align: center;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
-    }
-    .hero-badge strong {
-      display: block;
-      font-size: 22px;
-      letter-spacing: 0.1em;
-    }
-
-    /* CATEGORY ICON ROW */
-    .cat-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-    .cat-item {
-      background: #fff;
-      border-radius: 999px;
-      padding: 10px 16px;
-      border: 1px solid #eee0d0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-    }
-
-    section { margin-bottom: 50px; }
-    .section-title {
-      font-size: 22px;
-      margin-bottom: 18px;
-    }
-
-    /* PRODUCT GRID */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .product {
-      background: #fff;
-      border-radius: 16px;
-      padding: 14px;
-      border: 1px solid #eee0d0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 13px;
-    }
-    .product-img {
-      height: 170px;
-      background: #f3ece4;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #7a5a3a;
-      margin-bottom: 6px;
-      font-size: 13px;
-    }
-    .product-name {
-      font-weight: 600;
-    }
-    .price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-    }
-    .price-sale {
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .price-mrp {
-      font-size: 12px;
-      color: #888;
-      text-decoration: line-through;
-    }
-    .price-tag {
-      font-size: 11px;
-      color: #b0484b;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    .product-note {
-      font-size: 12px;
-      color: #777;
-    }
-    .product-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 6px;
-    }
-    .qty-display {
-      font-size: 11px;
-      color: #555;
-    }
-    .badge-soldout {
-      font-size: 12px;
-      color: #b0484b;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    /* CART */
-    .cart-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 26px;
-      align-items: flex-start;
-    }
-    .cart {
-      background: #fff;
-      border-radius: 16px;
-      border: 1px solid #eee0d0;
-      padding: 16px;
-      max-width: 420px;
-    }
-    .cart-title {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-    .cart-empty {
-      font-size: 13px;
-      color: #777;
-      margin-bottom: 8px;
-    }
-    .cart-items {
-      list-style: none;
-      max-height: 230px;
-      overflow-y: auto;
-      margin-bottom: 10px;
-      font-size: 13px;
-    }
-    .cart-items li {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 6px;
-      cursor: pointer;
-    }
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .cart-note {
-      font-size: 11px;
-      color: #777;
-      margin-bottom: 10px;
-    }
-
-    .about {
-      font-size: 14px;
-      color: #555;
-      max-width: 720px;
-    }
-
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 28px 24px;
-      font-size: 13px;
-    }
-    footer .inner {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .wa-float {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      background: #25d366;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
-    }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .cart-row { grid-template-columns: 1fr; }
-      .menu { display: none; }
-      main { padding: 0 16px; }
-    }
+    body { font-family: Arial; margin:0; background:#f6f6f6; }
+    header { background:#fff; padding:15px; border-bottom:1px solid #ddd; }
+    header b { font-size:18px; letter-spacing:2px; }
+    .wrap { max-width:1100px; margin:auto; padding:20px; }
+    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .card { background:#fff; padding:12px; border-radius:10px; border:1px solid #eee; }
+    .img { height:140px; background:#ddd; border-radius:8px; margin-bottom:8px; text-align:center; line-height:140px; }
+    .price { font-weight:bold; }
+    .old { text-decoration:line-through; font-size:13px; color:gray; }
+    button { background:black; color:white; border:none; padding:8px 12px; border-radius:20px; cursor:pointer; }
+    .cart { margin-top:40px; padding:20px; background:#fff; border-radius:10px; }
   </style>
 </head>
 <body>
 
-<div class="top-bar">
-  B.O.T.M. SALE IS LIVE · USE CODE <strong>NESTBOTM10</strong> (example - change text as you like)
-</div>
-
 <header>
-  <div class="nav">
-    <div class="logo"><span>DECORA</span>KART</div>
-    <nav class="menu">
-      <a href="#shop">New In</a>
-      <a href="#shop">Mugs</a>
-      <a href="#shop">Plates</a>
-      <a href="#shop">Bowls</a>
-      <a href="#shop">Planters</a>
-      <a href="#shop">Decor</a>
-    </nav>
-    <button class="btn-outline" onclick="scrollToSection('cart')">Cart</button>
+  <div class="wrap">
+    <b>DECORAKART</b>
   </div>
 </header>
 
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-banner">
-      Hero image (upload your banner.jpg later)
-      <div class="hero-badge">
-        B.O.T.M. SALE<br>
-        <strong>70% OFF</strong>
-        + EXTRA 10%
-      </div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-tag">Christmas Must Haves</div>
-      <h1 class="hero-title">Cozy ceramic pieces for warm homes.</h1>
-      <p class="hero-sub">
-        Build your dream table with mugs, plates and serveware that make every chai break
-        and dinner look like a celebration.
-      </p>
-      <div class="hero-sale">SITEWIDE SALE IS LIVE · LIMITED PIECES ONLY</div>
-      <div style="margin-top:14px;">
-        <button class="btn-main" onclick="scrollToSection('shop')">Shop Now</button>
-      </div>
-    </div>
-  </section>
+<div class="wrap">
+  <h2>Shop</h2>
+  <div class="products" id="products"></div>
 
-  <!-- CATEGORY ICONS -->
-  <section>
-    <div class="cat-row">
-      <div class="cat-item">Mugs & Cups</div>
-      <div class="cat-item">Plates & Dinner Sets</div>
-      <div class="cat-item">Bowls & Serveware</div>
-      <div class="cat-item">Planters</div>
-      <div class="cat-item">Home Decor</div>
-    </div>
-  </section>
-
-  <!-- SHOP + CART -->
-  <section id="shop">
-    <div class="section-title">Best Sellers</div>
-    <div class="cart-row">
-      <div>
-        <div class="products" id="product-list"></div>
-      </div>
-
-      <div id="cart" class="cart">
-        <div class="cart-title">Your Cart</div>
-        <div id="cart-empty" class="cart-empty">No items yet. Add products from the left.</div>
-        <ul id="cart-items" class="cart-items"></ul>
-        <div id="cart-total" class="cart-total" style="display:none;">
-          <span>Total</span><span id="cart-total-value">₹0</span>
-        </div>
-        <div class="cart-note">
-          Click any cart item to reduce quantity. Shipping & final total will be confirmed on WhatsApp.
-        </div>
-        <button class="btn-main" style="width:100%; margin-bottom:8px;" onclick="checkoutWhatsApp()">
-          Checkout on WhatsApp
-        </button>
-        <button class="btn-outline" style="width:100%;" onclick="clearCart()">
-          Clear cart
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-title">About Decorakart</div>
-    <p class="about">
-      Decorakart is a premium ceramic and home décor brand curated for refined, modern living. Our collection features elegant mugs, plates, bowls, planters, and décor accents designed to elevate everyday spaces with timeless beauty and superior craftsmanship.
-
-Each product is carefully selected for its quality, finish, and design integrity. We operate on a direct-dispatch fulfillment model to ensure every order is professionally packed and delivered with the highest standards of care. For a personalized luxury experience, all orders are currently processed via WhatsApp, allowing customers to receive real product visuals, live availability, and dedicated support before purchase.
-    </p>
-  </section>
-</main>
-
-<footer>
-  <div class="inner">
-    <span>© <span id="year"></span> Decorakart. All rights reserved.</span>
-    <span>WhatsApp orders only · +91-8807403946</span>
+  <div class="cart">
+    <h3>Cart</h3>
+    <ul id="cart"></ul>
+    <b id="total">Total: ₹0</b><br><br>
+    <button onclick="checkout()">Checkout on WhatsApp</button>
   </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/918807403946" target="_blank">WhatsApp</a>
+</div>
 
 <script>
-  // PRODUCT DATA: yahan se tum easy edit kar sakte ho
-  const products = [
-    {
-      id: 'mug-matte',
-      name: 'Matte Ceramic Mug – 350 ml',
-      mrp: 599,
-      price: 499,
-      note: 'Everyday chai & coffee mug.',
-      stock: 'in'
-    },
-    {
-      id: 'plate-speckled',
-      name: 'Speckled Dinner Plate – 10 inch',
-      mrp: 899,
-      price: 749,
-      note: 'Hand-glazed speckled plate.',
-      stock: 'in'
-    },
-    {
-      id: 'planter-desk',
-      name: 'Minimal Desk Planter',
-      mrp: 699,
-      price: 599,
-      note: 'Perfect for succulents & small plants.',
-      stock: 'in'
-    },
-    {
-      id: 'bowl-snack',
-      name: 'Snack Bowl Set – set of 2',
-      mrp: 749,
-      price: 649,
-      note: 'Ideal for snacks, dips & desserts.',
-      stock: 'in'
-    }
-  ];
+let cart = {};
+const phone = "918807403946";
 
-  const cart = {};
+fetch("products.json")
+.then(r => r.json())
+.then(data => {
+  const productsDiv = document.getElementById("products");
+  data.forEach(p => {
+    if(!p.active || p.stock === "out-of-stock") return;
 
-  function renderProducts() {
-    const list = document.getElementById('product-list');
-    list.innerHTML = '';
-    products.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'product';
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <div class="img">${p.name.split(" ")[0]}</div>
+      <b>${p.name}</b><br>
+      <span class="old">₹${p.price}</span> 
+      <span class="price">₹${p.salePrice}</span><br>
+      <button onclick="add('${p.id}',${p.salePrice},'${p.name}')">Add to Cart</button>
+    `;
+    productsDiv.appendChild(div);
+  });
+});
 
-      const hasDiscount = p.price < p.mrp;
-      const offPercent = hasDiscount ? Math.round(((p.mrp - p.price) / p.mrp) * 100) : 0;
+function add(id, price, name) {
+  if(!cart[id]) cart[id] = {name, price, qty:1};
+  else cart[id].qty++;
+  updateCart();
+}
 
-      div.innerHTML = `
-        <div class="product-img">${p.name.split('–')[0].trim()} image</div>
-        <div class="product-name">${p.name}</div>
-        <div class="price-row">
-          <span class="price-sale">₹${p.price}</span>
-          ${hasDiscount ? `<span class="price-mrp">₹${p.mrp}</span>` : ''}
-        </div>
-        ${hasDiscount ? `<div class="price-tag">SAVE ${offPercent}%</div>` : ''}
-        <div class="product-note">${p.note}</div>
-        <div class="product-actions">
-          ${p.stock === 'in'
-            ? `<button class="btn-main" style="padding:6px 14px; font-size:12px;" onclick="addToCart('${p.id}')">Add to cart</button>
-               <span class="qty-display" id="qty-${p.id}"></span>`
-            : `<span class="badge-soldout">Sold Out</span>`}
-        </div>
-      `;
-      list.appendChild(div);
-    });
+function updateCart() {
+  let ul = document.getElementById("cart");
+  let total = 0;
+  ul.innerHTML = "";
+  for(let k in cart) {
+    let li = document.createElement("li");
+    li.textContent = cart[k].name + " x " + cart[k].qty + " = ₹" + (cart[k].qty * cart[k].price);
+    total += cart[k].qty * cart[k].price;
+    ul.appendChild(li);
   }
+  document.getElementById("total").innerText = "Total: ₹" + total;
+}
 
-  function addToCart(id) {
-    cart[id] = (cart[id] || 0) + 1;
-    updateCartUI();
+function checkout() {
+  if(Object.keys(cart).length === 0){
+    alert("Cart khali hai, pehle kuch add karo.");
+    return;
   }
-
-  function removeFromCart(id) {
-    if (!cart[id]) return;
-    cart[id] -= 1;
-    if (cart[id] <= 0) delete cart[id];
-    updateCartUI();
+  let msg = "Hi Decorakart, I want to order:\n";
+  let total = 0;
+  for(let k in cart) {
+    msg += cart[k].name + " x " + cart[k].qty + "\n";
+    total += cart[k].qty * cart[k].price;
   }
-
-  function clearCart() {
-    for (const id in cart) delete cart[id];
-    updateCartUI();
-  }
-
-  function updateCartUI() {
-    const itemsEl = document.getElementById('cart-items');
-    const emptyEl = document.getElementById('cart-empty');
-    const totalEl = document.getElementById('cart-total');
-    const totalValEl = document.getElementById('cart-total-value');
-
-    itemsEl.innerHTML = '';
-    let total = 0;
-    let hasItems = false;
-
-    products.forEach(p => {
-      const qty = cart[p.id] || 0;
-      const qtySpan = document.getElementById('qty-' + p.id);
-      if (qtySpan) qtySpan.textContent = qty ? `In cart: ${qty}` : '';
-      if (qty) {
-        hasItems = true;
-        const lineTotal = p.price * qty;
-        total += lineTotal;
-        const li = document.createElement('li');
-        li.innerHTML = `<span>${p.name} × ${qty}</span><span>₹${lineTotal}</span>`;
-        li.onclick = () => removeFromCart(p.id);
-        itemsEl.appendChild(li);
-      }
-    });
-
-    if (!hasItems) {
-      emptyEl.style.display = 'block';
-      totalEl.style.display = 'none';
-    } else {
-      emptyEl.style.display = 'none';
-      totalEl.style.display = 'flex';
-      totalValEl.textContent = '₹' + total;
-    }
-  }
-
-  function checkoutWhatsApp() {
-    let text = 'Hi Decorakart, I want to place this order:%0A%0A';
-    let total = 0;
-    let hasItems = false;
-
-    products.forEach(p => {
-      const qty = cart[p.id] || 0;
-      if (qty) {
-        hasItems = true;
-        const lineTotal = p.price * qty;
-        total += lineTotal;
-        text += `• ${p.name} × ${qty} = ₹${lineTotal}%0A`;
-      }
-    });
-
-    if (!hasItems) {
-      alert('Cart is empty. Please add some products first.');
-      return;
-    }
-
-    text += `%0AOrder total (approx): ₹${total}%0A%0AName:%0AAddress:%0APincode:%0APayment mode: UPI`;
-    const url = `https://wa.me/918807403946?text=${text}`;
-    window.open(url, '_blank');
-  }
-
-  function scrollToSection(id) {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-  renderProducts();
-  updateCartUI();
+  msg += "\nTotal: ₹" + total + "\nName:\nAddress:\nPincode:";
+  window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg));
+}
 </script>
 
 </body>
 </html>
-
