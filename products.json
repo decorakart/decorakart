@@ -1,0 +1,29 @@
+[
+  {
+    "id": "mug-1",
+    "name": "Matte Coffee Mug – 350 ml",
+    "price": 599,
+    "salePrice": 499,
+    "active": true,
+    "stock": "in-stock",
+    "description": "Minimal matte ceramic mug perfect for daily chai & coffee."
+  },
+  {
+    "id": "plate-1",
+    "name": "Speckled Dinner Plate – 10 inch",
+    "price": 899,
+    "salePrice": 749,
+    "active": true,
+    "stock": "in-stock",
+    "description": "Hand-glazed speckled plate for modern tables."
+  },
+  {
+    "id": "planter-1",
+    "name": "Minimal Desk Planter",
+    "price": 699,
+    "salePrice": 599,
+    "active": true,
+    "stock": "in-stock",
+    "description": "Perfect for succulents & small indoor plants."
+  }
+]
